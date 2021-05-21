@@ -20,30 +20,44 @@
     var CONFIG = {"hostname":"neil978.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="放一些筆記">
-<meta property="og:type" content="website">
-<meta property="og:title" content="NeiL的雜貨間">
-<meta property="og:url" content="https://neil978.github.io/index.html">
+  <meta name="description" content="Typora 寫文章利用 PicGo-core 將圖片上傳至 Github前言最近打算開始在 Github page 上寫些 Blog，以前都只是寫些備忘錄存放在本機，圖片也都是存放在本機的資料夾中，但因為現在有寫 Blog 的因素，圖片的存放無法再只是存放在本機，所以這邊打算利用 PicGo-Core 來將文章中的圖片自動上傳到 Github 的 repo 中，並提取出連結替換 Markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typora寫文章利用PicGo-core將圖片上傳至Github">
+<meta property="og:url" content="https://neil978.github.io/2021/05/22/2021-05-22-Typora-PicGo-uploader/index.html">
 <meta property="og:site_name" content="NeiL的雜貨間">
-<meta property="og:description" content="放一些筆記">
+<meta property="og:description" content="Typora 寫文章利用 PicGo-core 將圖片上傳至 Github前言最近打算開始在 Github page 上寫些 Blog，以前都只是寫些備忘錄存放在本機，圖片也都是存放在本機的資料夾中，但因為現在有寫 Blog 的因素，圖片的存放無法再只是存放在本機，所以這邊打算利用 PicGo-Core 來將文章中的圖片自動上傳到 Github 的 repo 中，並提取出連結替換 Markdown">
 <meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-21%20%E4%B8%8B%E5%8D%888.02.01.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521200851182.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521203543395.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521204017893.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521213648847.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521214102701.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-21%20%E4%B8%8B%E5%8D%889.43.03.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-21%20%E4%B8%8B%E5%8D%889.54.29.png">
+<meta property="article:published_time" content="2021-05-21T22:24:29.000Z">
+<meta property="article:modified_time" content="2021-05-21T22:29:52.468Z">
 <meta property="article:author" content="NeiL Liu">
+<meta property="article:tag" content="Typora">
+<meta property="article:tag" content="PicGo">
+<meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-21%20%E4%B8%8B%E5%8D%888.02.01.png">
 
-<link rel="canonical" href="https://neil978.github.io/">
+<link rel="canonical" href="https://neil978.github.io/2021/05/22/2021-05-22-Typora-PicGo-uploader/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-TW'
   };
 </script>
 
-  <title>NeiL的雜貨間</title>
+  <title>Typora寫文章利用PicGo-core將圖片上傳至Github | NeiL的雜貨間</title>
   
 
 
@@ -142,9 +156,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
@@ -160,10 +175,9 @@
       <meta itemprop="name" content="NeiL的雜貨間">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/22/2021-05-22-Typora-PicGo-uploader/" class="post-title-link" itemprop="url">Typora寫文章利用PicGo-core將圖片上傳至Github</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Typora寫文章利用PicGo-core將圖片上傳至Github
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -201,7 +215,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Typora-寫文章利用-PicGo-core-將圖片上傳至-Github"><a href="#Typora-寫文章利用-PicGo-core-將圖片上傳至-Github" class="headerlink" title="Typora 寫文章利用 PicGo-core 將圖片上傳至 Github"></a>Typora 寫文章利用 PicGo-core 將圖片上傳至 Github</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近打算開始在 Github page 上寫些 Blog，以前都只是寫些備忘錄存放在本機，圖片也都是存放在本機的資料夾中，但因為現在有寫 Blog 的因素，圖片的存放無法再只是存放在本機，所以這邊打算利用 PicGo-Core 來將文章中的圖片自動上傳到 Github 的 repo 中，並提取出連結替換 Markdown 文章中的圖片位址。</p>
+        <h1 id="Typora-寫文章利用-PicGo-core-將圖片上傳至-Github"><a href="#Typora-寫文章利用-PicGo-core-將圖片上傳至-Github" class="headerlink" title="Typora 寫文章利用 PicGo-core 將圖片上傳至 Github"></a>Typora 寫文章利用 PicGo-core 將圖片上傳至 Github</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近打算開始在 Github page 上寫些 Blog，以前都只是寫些備忘錄存放在本機，圖片也都是存放在本機的資料夾中，但因為現在有寫 Blog 的因素，圖片的存放無法再只是存放在本機，所以這邊打算利用 PicGo-Core 來將文章中的圖片自動上傳到 Github 的 repo 中，並提取出連結替換 Markdown 文章中的圖片位址。</p>
 <h2 id="安裝-PicGo-Core"><a href="#安裝-PicGo-Core" class="headerlink" title="安裝 PicGo-Core"></a>安裝 PicGo-Core</h2><p><a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Core-Doc/">PicGo-Core</a>是個 Node.js 開發的自動上傳圖片 Command Line Tool，本身也有 APP 版本，但 MacOS 要使用 Typora 自動上傳的話，似乎只能使用 Core 這個版本，而 PicGo 本身也有許多大神為他開發了不少<a target="_blank" rel="noopener" href="https://github.com/PicGo/Awesome-PicGo">Plugin</a>可供使用。</p>
 <blockquote>
 <p><strong><em>輸入<code>node -v</code>確認系統 Node 版本 &gt;= 8.0。</em></strong></p>
@@ -288,244 +302,48 @@
 <p><a target="_blank" rel="noopener" href="https://support.typora.io/Upload-Image/#picgo-core-command-line-opensource">Typora Doc</a></p>
 </blockquote>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/Typora/" rel="tag"># Typora</a>
+              <a href="/tags/PicGo/" rel="tag"># PicGo</a>
+              <a href="/tags/Github/" rel="tag"># Github</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://neil978.github.io/2021/05/22/2021-05-22-Set-up-RaspAP/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NeiL Liu">
-      <meta itemprop="description" content="放一些筆記">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NeiL的雜貨間">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/22/2021-05-22-Set-up-RaspAP/" class="post-title-link" itemprop="url">使用RaspAP將樹莓派變身為無線路由器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-              
-
-              <time title="創建時間：2021-05-22 05:13:38 / 修改時間：06:21:51" itemprop="dateCreated datePublished" datetime="2021-05-22T05:13:38+08:00">2021-05-22</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2021/05/22/2021-05-22-Set-up-RaspAP/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/05/22/2021-05-22-Set-up-RaspAP/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="使用-RaspAP-將樹莓派變身為無線路由器"><a href="#使用-RaspAP-將樹莓派變身為無線路由器" class="headerlink" title="使用 RaspAP 將樹莓派變身為無線路由器"></a>使用 RaspAP 將樹莓派變身為無線路由器</h1><hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由於租屋處的無線路由器壞了，正好手邊有一台樹莓派閒置著，就把它拿來當作暫時的路由器來使用。</p>
-<hr>
-<h2 id="安裝-RaspAP"><a href="#安裝-RaspAP" class="headerlink" title="安裝 RaspAP"></a>安裝 RaspAP</h2><ul>
-<li><p>更新套件列表</p>
-<p>在安裝之前，我們要先將系統套件列表更新，才能安裝到最新版的 RaspAP。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get full-upgrade</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></li>
-<li><p>安裝<a target="_blank" rel="noopener" href="https://raspap.com/">RaspAP</a>，讓樹莓派具有 AP 功能 (Hotspot)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https://install.raspap.com | bash</span><br></pre></td></tr></table></figure>
-
-<p>在安裝過程中會有一些選項，可以根據你的需求來選擇即可。 (預設都選擇 Y)</p>
-<p>安裝完成後，輸入<code>sudo reboot</code>，來重開樹莓派。</p>
-</li>
-</ul>
-<hr>
-<h2 id="設定-RaspAP"><a href="#設定-RaspAP" class="headerlink" title="設定 RaspAP"></a>設定 RaspAP</h2><p>重開完成在瀏覽器輸入<a target="_blank" rel="noopener" href="http://raspberrypi.local/">http://raspberrypi.local/</a>進入管理頁面：</p>
-<p>預設的 Username: <code>admin</code> Password: <code>secret</code></p>
-<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-19%20%E4%B8%8A%E5%8D%883.06.19.png" alt="截圖 2021-05-19 上午3.06.19" style="zoom:50%;" />
-
-<p>登入成功後可以看到左上角 Status 的 Hotspot 已經 Active 了。</p>
-<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-19%20%E4%B8%8A%E5%8D%883.59.11.png" alt="截圖 2021-05-19 上午3.59.11" style="zoom:50%;" />
-
-<p>接著請點選左邊的<strong>Hotspot</strong>修改<strong>Wireless Mode</strong>，你會發現無法選取 802.11ac 的 5Ghz 頻段，那是因為 802.11ac - 5Ghz 因應各國家的法規不同，RaspAP 預設將 5Ghz 關閉了。</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://docs.raspap.com/faq/#80211ac">RaspAP FAQ</a></p>
-</blockquote>
-<hr>
-<h2 id="開啟-Wireless-Mode-的-802-11ac-5Ghz-頻段"><a href="#開啟-Wireless-Mode-的-802-11ac-5Ghz-頻段" class="headerlink" title="開啟 Wireless Mode 的 802.11ac - 5Ghz 頻段"></a>開啟 Wireless Mode 的 802.11ac - 5Ghz 頻段</h2><p>要開啟 5Ghz 頻段需要先設定樹莓派的連線國別為<code>US</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iw reg <span class="built_in">set</span> US</span><br></pre></td></tr></table></figure>
-
-<p>然後再到<strong>Hotspot→Advanced</strong>設定<strong>Country Code</strong>為<code>United States</code>，然後 Save settings 及 Restart Hotspot。</p>
-<blockquote>
-<p>PS. 設為澳洲也無法使用 5Ghz，似乎只能使用 US。</p>
-</blockquote>
-<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210519042740771.png" alt="image-20210519042740771" style="zoom:50%;" />
-
-<hr>
-<h2 id="其他設備連線到-RaspAP-的-Hotspot"><a href="#其他設備連線到-RaspAP-的-Hotspot" class="headerlink" title="其他設備連線到 RaspAP 的 Hotspot"></a>其他設備連線到 RaspAP 的 Hotspot</h2><p>當 Hotspot 重開完成後，你的手機、電腦就可以使用 WiFi 連線了。</p>
-<p>預設的 SSID 為<code>raspi-webgui</code>，密碼是<code>ChangeMe</code></p>
-<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210519044317107.png" alt="image-20210519044317107" style="zoom:50%;" />
-
-<hr>
-<h2 id="使用-USB-網卡有線連接-RaspAP"><a href="#使用-USB-網卡有線連接-RaspAP" class="headerlink" title="使用 USB 網卡有線連接 RaspAP"></a>使用 USB 網卡有線連接 RaspAP</h2><p>但通常 PC 主機沒有無線網卡，無法使用 WiFi 來連接網路，所以需要使用 USB 網卡來連接有線網路。</p>
-<p>如果直接接上 USB 網卡的話，IP 位址會是<code>169.254.x.x</code>，是無法連接網路的，所以我們需要配置一下。</p>
-<p>首先先說明我的連線設置，我的外網網路線是接在 USB 網卡<code>eth1</code>上，然後 PC 的網路線是接在樹莓派上的 RJ45 接口<code>eth0</code>上，所以我才會設定<code>eth0</code>，正常情況應該是將外網網路接在樹莓派上的<code>eth0</code>、USB 網卡<code>eth1</code>連接 PC。</p>
-<p>編輯樹莓派的<code>/etc/dhcpcd.conf</code>，在最下方添加如下配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># eth0 configuration</span></span><br><span class="line">interface eth0</span><br><span class="line">static ip_address = 192.168.100.1/24</span><br><span class="line">static domain_name_server =</span><br></pre></td></tr></table></figure>
-
-<p>然後在<code>/etc/dnsmasq.d/</code>下新增一個<code>eth0.conf</code>檔案，添加如下配置：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">interface = eth0</span><br><span class="line">dhcp-range = 192.168.100.100, 192.168.100.255, 255.255.255.0, 12h</span><br></pre></td></tr></table></figure>
-
-<p>重啟<code>dhcpcd</code>和<code>dnsmasq</code>服務。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart dhcpcd</span><br><span class="line">sudo systemctl restart dnsmasq</span><br></pre></td></tr></table></figure>
-
-<p>透過<code>ifconfig</code>指令，可以看到<code>eth0</code>的 IP 位址已經變更為<code>192.168.100.1</code>了，同時與之相連的 PC 也獲取了該網段的 IP 位址。</p>
-<p>現在 PC 也能愉快的連接網際網路了。</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://raspap.com/">RaspAP</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.wyr.me/post/621##toc2-1">树莓派 4 变身旁路由</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=e5SRagTdMGk">樹莓派 4 變身 5GHz 多功能路由器 RaspAP 免費安裝及開啟 802.11.ac 技巧 Raspberry Pi 4</a></p>
-</blockquote>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/05/22/2021-05-22-Set-up-RaspAP/" rel="prev" title="使用RaspAP將樹莓派變身為無線路由器">
+      <i class="fa fa-chevron-left"></i> 使用RaspAP將樹莓派變身為無線路由器
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://neil978.github.io/2021/05/22/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="NeiL Liu">
-      <meta itemprop="description" content="放一些筆記">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="NeiL的雜貨間">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/22/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">發表於</span>
-
-              <time title="創建時間：2021-05-22 02:28:33" itemprop="dateCreated datePublished" datetime="2021-05-22T02:28:33+08:00">2021-05-22</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus：</span>
-    
-    <a title="disqus" href="/2021/05/22/hello-world/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/05/22/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -572,6 +390,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Typora-%E5%AF%AB%E6%96%87%E7%AB%A0%E5%88%A9%E7%94%A8-PicGo-core-%E5%B0%87%E5%9C%96%E7%89%87%E4%B8%8A%E5%82%B3%E8%87%B3-Github"><span class="nav-number">1.</span> <span class="nav-text">Typora 寫文章利用 PicGo-core 將圖片上傳至 Github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-PicGo-Core"><span class="nav-number">1.2.</span> <span class="nav-text">安裝 PicGo-Core</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%9D"><span class="nav-number">1.2.1.</span> <span class="nav-text">全局安裝</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github-%E6%96%B0%E5%A2%9E%E5%B0%88%E9%96%80%E6%94%BE%E5%9C%96%E7%89%87%E7%9A%84-repo"><span class="nav-number">1.3.</span> <span class="nav-text">Github 新增專門放圖片的 repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PicGo-Core-%E8%A8%AD%E7%BD%AE-Github-repo-%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A"><span class="nav-number">1.4.</span> <span class="nav-text">PicGo-Core 設置 Github repo 相關設定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B8%AC%E8%A9%A6-PicGo-Core-%E6%98%AF%E5%90%A6%E8%83%BD%E5%A4%A0%E5%B0%87%E5%9C%96%E7%89%87%E4%B8%8A%E5%82%B3%E8%87%B3-repo"><span class="nav-number">1.5.</span> <span class="nav-text">測試 PicGo-Core 是否能夠將圖片上傳至 repo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A8%AD%E7%BD%AE-Typora-%E4%BD%BF%E7%94%A8-PicGo-Core-%E8%87%AA%E5%8B%95%E4%B8%8A%E5%82%B3%E5%9C%96%E7%89%87"><span class="nav-number">1.6.</span> <span class="nav-text">設置 Typora 使用 PicGo-Core 自動上傳圖片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%93%E5%9C%96%E7%89%87%E8%83%BD%E5%90%8C%E6%99%82%E5%84%B2%E5%AD%98%E5%88%B0%E6%9C%AC%E6%A9%9F%E5%8F%8A-Github-%E5%9C%96%E5%BA%8A%E4%B8%8A"><span class="nav-number">1.7.</span> <span class="nav-text">讓圖片能同時儲存到本機及 Github 圖床上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B5%90%E5%B0%BE"><span class="nav-number">1.8.</span> <span class="nav-text">結尾</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -686,6 +505,26 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://neil978.github.io/2021/05/22/2021-05-22-Typora-PicGo-uploader/";
+    this.page.identifier = "2021/05/22/2021-05-22-Typora-PicGo-uploader/";
+    this.page.title = "Typora寫文章利用PicGo-core將圖片上傳至Github";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://neil978.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>

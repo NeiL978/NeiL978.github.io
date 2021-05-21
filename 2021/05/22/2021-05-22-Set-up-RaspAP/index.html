@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"neil978.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="使用 RaspAP 將樹莓派變身為無線路由器 前言​ 由於租屋處的無線路由器壞了，正好手邊有一台樹莓派閒置著，就把它拿來當作暫時的路由器來使用。  安裝 RaspAP 更新套件列表 在安裝之前，我們要先將系統套件列表更新，才能安裝到最新版的 RaspAP。 123sudo apt-get updatesudo apt-get full-upgradesudo reboot 安裝RaspAP，讓樹莓">
+  <meta name="description" content="使用 RaspAP 將樹莓派變身為無線路由器 前言由於租屋處的無線路由器壞了，正好手邊有一台樹莓派閒置著，就把它拿來當作暫時的路由器來使用。  安裝 RaspAP 更新套件列表 在安裝之前，我們要先將系統套件列表更新，才能安裝到最新版的 RaspAP。 123sudo apt-get updatesudo apt-get full-upgradesudo reboot 安裝RaspAP，讓樹莓派具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用RaspAP將樹莓派變身為無線路由器">
 <meta property="og:url" content="https://neil978.github.io/2021/05/22/2021-05-22-Set-up-RaspAP/index.html">
 <meta property="og:site_name" content="NeiL的雜貨間">
-<meta property="og:description" content="使用 RaspAP 將樹莓派變身為無線路由器 前言​ 由於租屋處的無線路由器壞了，正好手邊有一台樹莓派閒置著，就把它拿來當作暫時的路由器來使用。  安裝 RaspAP 更新套件列表 在安裝之前，我們要先將系統套件列表更新，才能安裝到最新版的 RaspAP。 123sudo apt-get updatesudo apt-get full-upgradesudo reboot 安裝RaspAP，讓樹莓">
+<meta property="og:description" content="使用 RaspAP 將樹莓派變身為無線路由器 前言由於租屋處的無線路由器壞了，正好手邊有一台樹莓派閒置著，就把它拿來當作暫時的路由器來使用。  安裝 RaspAP 更新套件列表 在安裝之前，我們要先將系統套件列表更新，才能安裝到最新版的 RaspAP。 123sudo apt-get updatesudo apt-get full-upgradesudo reboot 安裝RaspAP，讓樹莓派具">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-19%20%E4%B8%8A%E5%8D%883.06.19.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-19%20%E4%B8%8A%E5%8D%883.59.11.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210519042740771.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210519044317107.png">
 <meta property="article:published_time" content="2021-05-21T21:13:38.000Z">
-<meta property="article:modified_time" content="2021-05-21T21:39:03.410Z">
+<meta property="article:modified_time" content="2021-05-21T22:21:51.418Z">
 <meta property="article:author" content="NeiL Liu">
 <meta property="article:tag" content="樹莓派">
 <meta property="article:tag" content="Raspberry Pi">
@@ -183,7 +183,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2021-05-22 05:13:38 / 修改時間：05:39:03" itemprop="dateCreated datePublished" datetime="2021-05-22T05:13:38+08:00">2021-05-22</time>
+              <time title="創建時間：2021-05-22 05:13:38 / 修改時間：06:21:51" itemprop="dateCreated datePublished" datetime="2021-05-22T05:13:38+08:00">2021-05-22</time>
             </span>
 
           
@@ -212,7 +212,7 @@
 
       
         <h1 id="使用-RaspAP-將樹莓派變身為無線路由器"><a href="#使用-RaspAP-將樹莓派變身為無線路由器" class="headerlink" title="使用 RaspAP 將樹莓派變身為無線路由器"></a>使用 RaspAP 將樹莓派變身為無線路由器</h1><hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​ 由於租屋處的無線路由器壞了，正好手邊有一台樹莓派閒置著，就把它拿來當作暫時的路由器來使用。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>由於租屋處的無線路由器壞了，正好手邊有一台樹莓派閒置著，就把它拿來當作暫時的路由器來使用。</p>
 <hr>
 <h2 id="安裝-RaspAP"><a href="#安裝-RaspAP" class="headerlink" title="安裝 RaspAP"></a>安裝 RaspAP</h2><ul>
 <li><p>更新套件列表</p>
@@ -295,7 +295,10 @@
     <a href="/2021/05/22/hello-world/" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/22/2021-05-22-Typora-PicGo-uploader/" rel="next" title="Typora寫文章利用PicGo-core將圖片上傳至Github">
+      Typora寫文章利用PicGo-core將圖片上傳至Github <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -375,12 +378,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">標籤</span>
       </div>
   </nav>
