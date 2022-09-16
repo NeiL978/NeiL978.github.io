@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Typora寫文章利用PicGo-core將圖片上傳至Github | NeiL的雜貨間</title><meta name="keywords" content="Typora,PicGo,Github"><meta name="author" content="NeiL Liu"><meta name="copyright" content="NeiL Liu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Typora 寫文章利用 PicGo-core 將圖片上傳至 Github前言最近打算開始在 Github page 上寫些 Blog，以前都只是寫些備忘錄存放在本機，圖片也都是存放在本機的資料夾中，但因為現在有寫 Blog 的因素，圖片的存放無法再只是存放在本機，所以這邊打算利用 PicGo-Core 來將文章中的圖片自動上傳到 Github 的 repo 中，並提取出連結替換 Markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typora寫文章利用PicGo-core將圖片上傳至Github">
+<meta property="og:url" content="https://neil978.github.io/20210522/4155743247/index.html">
+<meta property="og:site_name" content="NeiL的雜貨間">
+<meta property="og:description" content="Typora 寫文章利用 PicGo-core 將圖片上傳至 Github前言最近打算開始在 Github page 上寫些 Blog，以前都只是寫些備忘錄存放在本機，圖片也都是存放在本機的資料夾中，但因為現在有寫 Blog 的因素，圖片的存放無法再只是存放在本機，所以這邊打算利用 PicGo-Core 來將文章中的圖片自動上傳到 Github 的 repo 中，並提取出連結替換 Markdown">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://typora.io/img/icon_512x512.png">
+<meta property="article:published_time" content="2021-05-21T22:24:29.000Z">
+<meta property="article:modified_time" content="2022-09-16T15:47:36.703Z">
+<meta property="article:author" content="NeiL Liu">
+<meta property="article:tag" content="Typora">
+<meta property="article:tag" content="PicGo">
+<meta property="article:tag" content="Github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://typora.io/img/icon_512x512.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://neil978.github.io/20210522/4155743247/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Typora寫文章利用PicGo-core將圖片上傳至Github',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-09-16 23:47:36'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://typora.io/img/icon_512x512.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">NeiL的雜貨間</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Typora寫文章利用PicGo-core將圖片上傳至Github</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" datetime="2021-05-21T22:24:29.000Z" title="發表於 2021-05-22 06:24:29">2021-05-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" datetime="2022-09-16T15:47:36.703Z" title="更新於 2022-09-16 23:47:36">2022-09-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Typora寫文章利用PicGo-core將圖片上傳至Github"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Typora-寫文章利用-PicGo-core-將圖片上傳至-Github"><a href="#Typora-寫文章利用-PicGo-core-將圖片上傳至-Github" class="headerlink" title="Typora 寫文章利用 PicGo-core 將圖片上傳至 Github"></a>Typora 寫文章利用 PicGo-core 將圖片上傳至 Github</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近打算開始在 Github page 上寫些 Blog，以前都只是寫些備忘錄存放在本機，圖片也都是存放在本機的資料夾中，但因為現在有寫 Blog 的因素，圖片的存放無法再只是存放在本機，所以這邊打算利用 PicGo-Core 來將文章中的圖片自動上傳到 Github 的 repo 中，並提取出連結替換 Markdown 文章中的圖片位址。</p>
+<h2 id="安裝-PicGo-Core"><a href="#安裝-PicGo-Core" class="headerlink" title="安裝 PicGo-Core"></a>安裝 PicGo-Core</h2><p><a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Core-Doc/">PicGo-Core</a>是個 Node.js 開發的自動上傳圖片 Command Line Tool，本身也有 APP 版本，但 MacOS 要使用 Typora 自動上傳的話，似乎只能使用 Core 這個版本，而 PicGo 本身也有許多大神為他開發了不少<a target="_blank" rel="noopener" href="https://github.com/PicGo/Awesome-PicGo">Plugin</a>可供使用。</p>
+<blockquote>
+<p><strong><em>輸入<code>node -v</code>確認系統 Node 版本 &gt;&#x3D; 8.0。</em></strong></p>
+</blockquote>
+<h3 id="全局安裝"><a href="#全局安裝" class="headerlink" title="全局安裝"></a>全局安裝</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安裝</span></span><br><span class="line">npm install picgo -g 或是 yarn global add picgo</span><br></pre></td></tr></table></figure>
+
+<p>也有單獨針對專案項目的單獨項目安裝方式，但要使 Typora 有自動上傳圖片功能，使用全局安裝即可。</p>
+<h2 id="Github-新增專門放圖片的-repo"><a href="#Github-新增專門放圖片的-repo" class="headerlink" title="Github 新增專門放圖片的 repo"></a>Github 新增專門放圖片的 repo</h2><ol>
+<li><p>首先你必須要有一個 Github 的帳號。</p>
+</li>
+<li><p>創建一個新的 Repository</p>
+<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-21%20%E4%B8%8B%E5%8D%888.02.01.png" alt="截圖 2021-05-21 下午8.02.01" style="zoom:50%;" />
+
+<blockquote>
+<p><strong>Repository name：</strong>PicBed （可自行填寫）</p>
+<p><strong>Description：</strong>For PicGo-Core Image Uploader (描述該 Repository 的用途)</p>
+<p><strong>選擇 Public</strong></p>
+<p><strong>只是存放圖片無需新增 README file 及.gitignore</strong></p>
+</blockquote>
+<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521200851182.png" alt="image-20210521200851182" style="zoom:50%;" />
+</li>
+<li><p>新增一個<a target="_blank" rel="noopener" href="https://github.com/settings/tokens">Token</a>。</p>
+<blockquote>
+<p>Settings &#x2F; Developer settings &#x2F; Personal access tokens → **<code>Generate new token</code>**。</p>
+</blockquote>
+<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521203543395.png" alt="image-20210521203543395" style="zoom:50%;" />
+
+<p>僅勾選 repo 讓 PicGo-Core 能夠存取你的 Repository，然後滑到最下面點擊**<code>Generate token</code>**。</p>
+<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521204017893.png" alt="image-20210521204017893" style="zoom:50%;" />
+
+<blockquote>
+<p><strong><em>當產生新的 Token 時，要注意 Token 只會顯示在當前頁面，之後無法從其他地方讀取到此 Token，要保存好。</em></strong></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="PicGo-Core-設置-Github-repo-相關設定"><a href="#PicGo-Core-設置-Github-repo-相關設定" class="headerlink" title="PicGo-Core 設置 Github repo 相關設定"></a>PicGo-Core 設置 Github repo 相關設定</h2><p>設定 Github 的 Configuration。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;repo&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Repository，格式是 username/reponame</span></span><br><span class="line">  <span class="attr">&quot;token&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// github token</span></span><br><span class="line">  <span class="attr">&quot;path&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 自定義路徑，比如 img/</span></span><br><span class="line">  <span class="attr">&quot;customUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 自定義域名，注意要加 http://或者 https://</span></span><br><span class="line">  <span class="attr">&quot;branch&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span> <span class="comment">// 分支名，默認是 main</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>輸入**<code>picgo set uploader</code>**，選擇 GitHub。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">neil@NeiLdeMBP ~ % picgo <span class="built_in">set</span> uploader</span><br><span class="line">? Choose a(n) uploader (Use arrow keys)</span><br><span class="line">  smms</span><br><span class="line">  tcyun</span><br><span class="line">❯ github</span><br><span class="line">  qiniu</span><br><span class="line">  imgur</span><br><span class="line">  aliyun</span><br><span class="line">  upyun</span><br></pre></td></tr></table></figure>
+
+<p>設定相關設置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">neil@NeiLdeMBP ~ % picgo <span class="built_in">set</span> uploader</span><br><span class="line">? Choose a(n) uploader github</span><br><span class="line">? repo: NeiL978/PicBed</span><br><span class="line">? branch: master</span><br><span class="line">? token: ghp_vxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><br><span class="line">? path: img/</span><br><span class="line">? customUrl:</span><br><span class="line">[PicGo SUCCESS]: Configure config successfully!</span><br></pre></td></tr></table></figure>
+
+<p>由於 PicGo-core 預設上傳圖床是 smms 圖床，需修改為 GitHub。</p>
+<p>輸入**<code>picgo use uploader</code>**，選擇 GitHub。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">neil@NeiLdeMBP ~ % picgo use uploader</span><br><span class="line">? Use an uploader (Use arrow keys)</span><br><span class="line">  smms</span><br><span class="line">  tcyun</span><br><span class="line">❯ github</span><br><span class="line">  qiniu</span><br><span class="line">  imgur</span><br><span class="line">  aliyun</span><br><span class="line">  upyun</span><br></pre></td></tr></table></figure>
+
+<h2 id="測試-PicGo-Core-是否能夠將圖片上傳至-repo"><a href="#測試-PicGo-Core-是否能夠將圖片上傳至-repo" class="headerlink" title="測試 PicGo-Core 是否能夠將圖片上傳至 repo"></a>測試 PicGo-Core 是否能夠將圖片上傳至 repo</h2><p>指令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picgo upload /xxx/xxx.jpg</span><br></pre></td></tr></table></figure>
+
+<p>結果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">neil@NeiLdeMBP ~ % picgo upload /Users/neil/Desktop/Git指令速查表.jpg</span><br><span class="line">[PicGo INFO]: Before transform</span><br><span class="line">[PicGo INFO]: Transforming... Current transformer is [path]</span><br><span class="line">[PicGo INFO]: Before upload</span><br><span class="line">[PicGo INFO]: Uploading... Current uploader is [github]</span><br><span class="line">[PicGo SUCCESS]:</span><br><span class="line">https://raw.githubusercontent.com/NeiL978/PicBed/master/img/Git指令速查表.jpg</span><br></pre></td></tr></table></figure>
+
+<h2 id="設置-Typora-使用-PicGo-Core-自動上傳圖片"><a href="#設置-Typora-使用-PicGo-Core-自動上傳圖片" class="headerlink" title="設置 Typora 使用 PicGo-Core 自動上傳圖片"></a>設置 Typora 使用 PicGo-Core 自動上傳圖片</h2><p>現在 PicGo-Core 的設置都設定好了，接下來就要實現 Typora 自動上傳的功能。</p>
+<p>首先先取得 picgo 及 node 的安裝路徑。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">neil@NeiLdeMBP ~ % <span class="built_in">which</span> picgo</span><br><span class="line">/Users/neil/.nvm/versions/node/v14.17.0/bin/picgo</span><br><span class="line">neil@NeiLdeMBP ~ % <span class="built_in">which</span> node</span><br><span class="line">/Users/neil/.nvm/versions/node/v14.17.0/bin/node</span><br></pre></td></tr></table></figure>
+
+<p>取得路徑後，在 Typora 中的偏好設定 → 圖片中設定。</p>
+<p>Image uploader Command：</p>
+<blockquote>
+<p>路徑為[your node path] [your picgo-core path] upload</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Users/neil/.nvm/versions/node/v14.17.0/bin/node /Users/neil/.nvm/versions/node/v14.17.0/bin/picgo upload</span><br></pre></td></tr></table></figure>
+
+<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521213648847.png" alt="image-20210521213648847" style="zoom:50%;" />
+
+<p>現在已經設定好了，可以點左下角的<code>Test Uploader</code>試試看效果。</p>
+<p>可以看到圖片已經成功上傳到 github 了。</p>
+<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20210521214102701.png" alt="image-20210521214102701" style="zoom:50%;" />
+
+<p>到 GitHub 的 Repository 中看看，已經能夠看到剛剛上傳的兩張 Typora icon 的 png 圖片了。</p>
+<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-21%20%E4%B8%8B%E5%8D%889.43.03.png" alt="截圖 2021-05-21 下午9.43.03" style="zoom:50%;" />
+
+<h2 id="讓圖片能同時儲存到本機及-Github-圖床上"><a href="#讓圖片能同時儲存到本機及-Github-圖床上" class="headerlink" title="讓圖片能同時儲存到本機及 Github 圖床上"></a>讓圖片能同時儲存到本機及 Github 圖床上</h2><p>但單單只是儲存在 github 上，也不是個相當安全的做法，最好還是在本機存一份備份。</p>
+<p>所以我們需要在剛剛的圖片設置中，將<code>Upload image</code>改為<code>複製圖片到資料夾 ./$&#123;filename&#125;.assets</code>。</p>
+<img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-21%20%E4%B8%8B%E5%8D%889.54.29.png" alt="截圖 2021-05-21 下午9.54.29" style="zoom:50%;" />
+
+<p>那現在每當新增圖片到文章中時，都會先在同文章的位置新增一個和文章同名的.assets 資料夾，並把圖片存放其中，但因為 Typora 只能選擇<code>Upload image</code>或是<code>複製圖片到資料夾</code>並無法同時進行，所以我們需要在圖片加入文章的時候，對圖片按右鍵，手動選擇<code>Upload Image</code>，Typora 就能將圖片上傳到 github 的 Ropository 中，並將文章中圖片的路徑改為 github 的圖片網址了，這樣我們的需求就已經達成了。</p>
+<h2 id="結尾"><a href="#結尾" class="headerlink" title="結尾"></a>結尾</h2><p>由於我將文章儲存在 Onedrive 資料夾中，所以現在就已經達成了將圖片上傳到 github 上，及備份到本機和 Onedrive 雲端空間中，未來若是 Github 上的圖片消失了，將來還是能夠在 Onedrive 中取得備份的圖檔。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Core-Doc/zh/guide/">PicGo-Core-Doc</a></p>
+<p><a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A">PicGo-Doc</a></p>
+<p><a target="_blank" rel="noopener" href="https://support.typora.io/Upload-Image/#picgo-core-command-line-opensource">Typora Doc</a></p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://neil978.github.io">NeiL Liu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章連結: </span><span class="post-copyright-info"><a href="https://neil978.github.io/20210522/4155743247/">https://neil978.github.io/20210522/4155743247/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://neil978.github.io" target="_blank">NeiL的雜貨間</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Typora/">Typora</a><a class="post-meta__tags" href="/tags/PicGo/">PicGo</a><a class="post-meta__tags" href="/tags/Github/">Github</a></div><div class="post_share"><div class="social-share" data-image="https://typora.io/img/icon_512x512.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/20220915/3359711851/"><img class="prev-cover" src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20220915201722749.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">iterm-oh-my-zsh</div></div></a></div><div class="next-post pull-right"><a href="/20210522/1747559436/"><img class="next-cover" src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-19%20%E4%B8%8A%E5%8D%883.59.11.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用RaspAP將樹莓派變身為無線路由器</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">NeiL Liu</div><div class="author-info__description">放一些筆記</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">17</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Typora-%E5%AF%AB%E6%96%87%E7%AB%A0%E5%88%A9%E7%94%A8-PicGo-core-%E5%B0%87%E5%9C%96%E7%89%87%E4%B8%8A%E5%82%B3%E8%87%B3-Github"><span class="toc-number">1.</span> <span class="toc-text">Typora 寫文章利用 PicGo-core 將圖片上傳至 Github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%9D-PicGo-Core"><span class="toc-number">1.2.</span> <span class="toc-text">安裝 PicGo-Core</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%9D"><span class="toc-number">1.2.1.</span> <span class="toc-text">全局安裝</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Github-%E6%96%B0%E5%A2%9E%E5%B0%88%E9%96%80%E6%94%BE%E5%9C%96%E7%89%87%E7%9A%84-repo"><span class="toc-number">1.3.</span> <span class="toc-text">Github 新增專門放圖片的 repo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PicGo-Core-%E8%A8%AD%E7%BD%AE-Github-repo-%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A"><span class="toc-number">1.4.</span> <span class="toc-text">PicGo-Core 設置 Github repo 相關設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%AC%E8%A9%A6-PicGo-Core-%E6%98%AF%E5%90%A6%E8%83%BD%E5%A4%A0%E5%B0%87%E5%9C%96%E7%89%87%E4%B8%8A%E5%82%B3%E8%87%B3-repo"><span class="toc-number">1.5.</span> <span class="toc-text">測試 PicGo-Core 是否能夠將圖片上傳至 repo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A8%AD%E7%BD%AE-Typora-%E4%BD%BF%E7%94%A8-PicGo-Core-%E8%87%AA%E5%8B%95%E4%B8%8A%E5%82%B3%E5%9C%96%E7%89%87"><span class="toc-number">1.6.</span> <span class="toc-text">設置 Typora 使用 PicGo-Core 自動上傳圖片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%93%E5%9C%96%E7%89%87%E8%83%BD%E5%90%8C%E6%99%82%E5%84%B2%E5%AD%98%E5%88%B0%E6%9C%AC%E6%A9%9F%E5%8F%8A-Github-%E5%9C%96%E5%BA%8A%E4%B8%8A"><span class="toc-number">1.7.</span> <span class="toc-text">讓圖片能同時儲存到本機及 Github 圖床上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B5%90%E5%B0%BE"><span class="toc-number">1.8.</span> <span class="toc-text">結尾</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/20220915/3359711851/" title="iterm-oh-my-zsh"><img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/image-20220915201722749.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="iterm-oh-my-zsh"/></a><div class="content"><a class="title" href="/20220915/3359711851/" title="iterm-oh-my-zsh">iterm-oh-my-zsh</a><time datetime="2022-09-15T14:02:59.000Z" title="發表於 2022-09-15 22:02:59">2022-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/20210522/4155743247/" title="Typora寫文章利用PicGo-core將圖片上傳至Github"><img src="https://typora.io/img/icon_512x512.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Typora寫文章利用PicGo-core將圖片上傳至Github"/></a><div class="content"><a class="title" href="/20210522/4155743247/" title="Typora寫文章利用PicGo-core將圖片上傳至Github">Typora寫文章利用PicGo-core將圖片上傳至Github</a><time datetime="2021-05-21T22:24:29.000Z" title="發表於 2021-05-22 06:24:29">2021-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/20210522/1747559436/" title="使用RaspAP將樹莓派變身為無線路由器"><img src="https://raw.githubusercontent.com/NeiL978/PicBed/master/img/%E6%88%AA%E5%9C%96%202021-05-19%20%E4%B8%8A%E5%8D%883.59.11.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用RaspAP將樹莓派變身為無線路由器"/></a><div class="content"><a class="title" href="/20210522/1747559436/" title="使用RaspAP將樹莓派變身為無線路由器">使用RaspAP將樹莓派變身為無線路由器</a><time datetime="2021-05-21T21:13:38.000Z" title="發表於 2021-05-22 05:13:38">2021-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/20210522/1243066710/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/20210522/1243066710/" title="Hello World">Hello World</a><time datetime="2021-05-21T18:28:33.059Z" title="發表於 2021-05-22 02:28:33">2021-05-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By NeiL Liu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
