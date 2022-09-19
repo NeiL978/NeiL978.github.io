@@ -4,9 +4,6 @@ https://neil978.github.io/20210522/4155743247/
 https://neil978.github.io/20210522/1243066710/
 https://neil978.github.io/about/index.html
 https://neil978.github.io/
-https://neil978.github.io/tags/%E6%A8%B9%E8%8E%93%E6%B4%BE/
-https://neil978.github.io/tags/Raspberry-Pi/
-https://neil978.github.io/tags/RaspAP/
 https://neil978.github.io/tags/Typora/
 https://neil978.github.io/tags/PicGo/
 https://neil978.github.io/tags/Github/
@@ -21,3 +18,6 @@ https://neil978.github.io/tags/%E7%B5%82%E7%AB%AF%E6%A9%9F/
 https://neil978.github.io/tags/oh-my-zsh/
 https://neil978.github.io/tags/nerd-fonts/
 https://neil978.github.io/tags/powerline-fonts/
+https://neil978.github.io/tags/%E6%A8%B9%E8%8E%93%E6%B4%BE/
+https://neil978.github.io/tags/Raspberry-Pi/
+https://neil978.github.io/tags/RaspAP/
