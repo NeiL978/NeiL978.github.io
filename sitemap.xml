@@ -77,27 +77,6 @@
   </url>
   
   <url>
-    <loc>https://neil978.github.io/tags/Typora/</loc>
-    <lastmod>2022-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://neil978.github.io/tags/PicGo/</loc>
-    <lastmod>2022-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://neil978.github.io/tags/Github/</loc>
-    <lastmod>2022-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://neil978.github.io/tags/MacOS/</loc>
     <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -169,6 +148,27 @@
   
   <url>
     <loc>https://neil978.github.io/tags/powerline-fonts/</loc>
+    <lastmod>2022-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://neil978.github.io/tags/Typora/</loc>
+    <lastmod>2022-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://neil978.github.io/tags/PicGo/</loc>
+    <lastmod>2022-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://neil978.github.io/tags/Github/</loc>
     <lastmod>2022-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
