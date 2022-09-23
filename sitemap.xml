@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://neil978.github.io/categories/index.html</loc>
+    <loc>https://neil978.github.io/tags/index.html</loc>
     
-    <lastmod>2022-09-22</lastmod>
+    <lastmod>2022-09-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://neil978.github.io/tags/index.html</loc>
+    <loc>https://neil978.github.io/categories/index.html</loc>
     
-    <lastmod>2022-09-22</lastmod>
+    <lastmod>2022-09-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
